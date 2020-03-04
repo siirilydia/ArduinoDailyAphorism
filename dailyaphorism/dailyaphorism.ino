@@ -3,11 +3,7 @@ LiquidCrystal lcd(12,11,5,4,3,2);
 
 const int switchPin = 6;
 int switchState = 0;
-int prevSwitchState = 0;
 int reply;
-int scrollAmount;
-
-char out_answer[70];
 
 void setup() {
 lcd.begin(16, 2);
@@ -16,13 +12,15 @@ randomSeed(analogRead(0));
 printStartText();
 }
 
+char Line1_fixed[] = "YOUR APHORISM:"; //This is the string that will be fixed in the first line of LCD.
+String Line2_scrolling_base = ""; //This string will be scrolled in the second line of LCD.
+
 void loop() {
   switchState = digitalRead(switchPin);
 
     if(switchState == HIGH){
 
-      char Line1_fixed[] = "YOUR APHORISM:"; //This is the string that will be fixed in the first line of LCD.
-      String Line2_scrolling_base = ""; //This string will be scrolled in the second line of LCD.
+      
     
       reply = random(2);
         
