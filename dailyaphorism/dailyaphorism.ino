@@ -138,7 +138,7 @@ void loop() {
                     Line2_scrolling_base += "GET UP AND YELL: PERKELE!!!";
                     break;
                   case 9:
-                    Line2_scrolling_base += "STOP READING THESE STUPID AFORISMS AND GO GET A LIFE";
+                    Line2_scrolling_base += "STOP READING THESE STUPID APHORISMS AND GO GET A LIFE";
                     break;
                   case 10:
                     Line2_scrolling_base += "BUILD A ROBOT THAT GENERATES BAD APHORISMS.";
